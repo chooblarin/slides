@@ -42,48 +42,48 @@ class: left, top
   - レイアウトのみ再利用するなら`<include>`で十分
   - でも多分，大体同じViewロジックを書くことになる
 
-  ---
-  ## カスタムViewをつくる
-  1. ViewやViewGroupを継承する
-  2. レイアウトXMLをつくる
-  3. Viewを操作するメソッドを追加する
+---
+## カスタムViewをつくる
+1. ViewやViewGroupを継承する
+2. レイアウトXMLをつくる
+3. Viewを操作するメソッドを追加する
 
-  以上！簡単〜
+以上！簡単〜
 
-  ---
-  ## カスタムViewにしたいものってどんなもの
-  - ローディングインディケーターを表示するビュー (元ネタより)
-  - バッジアイコン付きボタン
-  - あるデータを決められたレイアウトに配置したいとか？
-  - 子Viewを先頭・末尾に追加したりするとか？
+---
+## カスタムViewにしたいものってどんなもの
+- ローディングインディケーターを表示するビュー (元ネタより)
+- バッジアイコン付きボタン
+- あるデータを決められたレイアウトに配置したいとか？
+- 子Viewを先頭・末尾に追加したりするとか？
 
-  etc...
+etc...
 
-  ---
-  ## Viewの状態いろいろ
-  - ローディングアイコン付きのビューの例
-  - ローディング中
-  - コンテンツ表示
-  - コンテンツが無い（エラー画面なんかでもいい）
+---
+## Viewの状態いろいろ
+- ローディングアイコン付きのビューの例
+- ローディング中
+- コンテンツ表示
+- コンテンツが無い（エラー画面なんかでもいい）
 
-  - バッジアイコン付きボタンの例
-  - 件数表示
-  - 最大数を超えたとき（99+とか）
-  - 0件のとき（バッジアイコンを非表示）
+- バッジアイコン付きボタンの例
+- 件数表示
+- 最大数を超えたとき（99+とか）
+- 0件のとき（バッジアイコンを非表示）
 
-  etc...
+etc...
 
-  ---
-  ## APIを定義 (ローディング付きビューの例)
-  ```java
-  public void showLoading() {}
-  public void showContent() {}
-  public void showEmptyState() {}
+---
+## APIを定義 (ローディング付きビューの例)
+```java
+public void showLoading() {}
+public void showContent() {}
+public void showEmptyState() {}
 
-  public View setContentView(int contentViewResourceId) {}
-  public View setEmptyView(int messageResourceId, int imageDrawableResourceId) {}
+public View setContentView(int contentViewResourceId) {}
+public View setEmptyView(int messageResourceId, int imageDrawableResourceId) {}
 
-  ```
+```
 
 - 機能を詰め込みすぎないように注意 (Do one thing very well)
 - 初期化メソッドから使うものと同じにすると良い
