@@ -1,11 +1,11 @@
-<!doctype html>
+<DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <title>Hello nichi World by chooblarin</title>
 
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <link href="stylesheets/pygment_trac.css" rel="stylesheet">
   <link href="stylesheets/common.css" rel="stylesheet" type="text/css" media="all">
   <script src="javascripts/scale.fix.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -13,16 +13,16 @@
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-<body>
-  <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-  <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
-  var query = window.location.search.substring(1);
-  var slideshow = remark.create({
-    sourceUrl: query ? "slides/" + query : "README.md",
-    highlightStyle: 'default',
-    highlightLanguage: 'sh'
-  });
-  </script>
-</body>
+  <body>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var query = window.location.search.substring(1);
+      var slideshow = remark.create({
+        sourceUrl: query ? "slides/" + query : "README.md",
+        highlightStyle: 'default',
+        highlightLanguage: 'sh'
+      });
+    </script>
+  </body>
 </html>

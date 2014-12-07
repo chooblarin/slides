@@ -33,7 +33,7 @@ class: left, top
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="match_parent">
-  
+
   ...
 
   <include layout="@layout_hoge"/>
@@ -215,9 +215,10 @@ interface MyCustomViewClickListener {
   void onRightItemClick();
   ...
 }
-
-になっちゃうので注意．何をカスタムビューでつくるかはよく考えたい．
 ```
+
+みたくなっちゃうので注意．何をカスタムビューでつくるかはよく考えたい．
+
 ---
 ## 作りまくると管理が大変
 - 以前，気付いたらカスタムビューだらけになって大変になった
