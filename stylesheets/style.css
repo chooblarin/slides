@@ -27,3 +27,8 @@ code {
   color: #f3f3f3;
   line-height: 0.8em;
 }
+
+.menu {
+  background: #282C34;
+  color: #c7c8c2;  
+}

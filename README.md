@@ -1,3 +1,5 @@
+class: menu
+
 ## Presentation
 
 ### Androidネタ
