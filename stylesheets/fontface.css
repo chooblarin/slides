@@ -1,0 +1,18 @@
+@font-face{
+  font-family: 'mplus-2m-regular';
+  src: url('http://mplus-webfonts.sourceforge.jp/mplus-2m-regular.eot');
+  src: url('http://mplus-webfonts.sourceforge.jp/mplus-2m-regular.eot?#iefix') format('embedded-opentype'),
+       url('http://mplus-webfonts.sourceforge.jp/mplus-2m-regular.woff') format('woff'),
+       url('http://mplus-webfonts.sourceforge.jp/mplus-2m-regular.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'mplus-2m-bold';
+  src: url('http://mplus-webfonts.sourceforge.jp/mplus-2m-bold.eot');
+  src: url('http://mplus-webfonts.sourceforge.jp/mplus-2m-bold.eot?#iefix') format('embedded-opentype'),
+       url('http://mplus-webfonts.sourceforge.jp/mplus-2m-bold.woff') format('woff'),
+       url('http://mplus-webfonts.sourceforge.jp/mplus-2m-bold.ttf') format('truetype');
+}
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+/*@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);*/

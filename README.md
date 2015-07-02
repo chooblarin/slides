@@ -1,7 +1,9 @@
-## Presentation for CA Androider
+## Presentation
+
+### Androidネタ
 
 - [カスタムビューについて](http://chooblarin.github.io/slides/?customview.md)
-  - まずはカスタムビューの使い方について話そう
 
-- Dive into ViewPager
-  - ViewPagerを使うときの注意点とか
+### その他
+
+- [Elixirはじめの一歩 (前篇)](http://chooblarin.github.io/slides/?elixir_intro_01.md)
