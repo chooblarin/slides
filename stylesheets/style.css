@@ -29,6 +29,17 @@ code {
 }
 
 .menu {
-  background: #282C34;
-  color: #c7c8c2;  
+  background: #4D394B;
+  color: #4D394B;
+  line-height: 0.6em;
+}
+
+.menu h1, .menu h2 {
+  color: #f3f3f3;
+  line-height: 0.8em;
+}
+
+.menu h3 {
+  color: #f3f3f3;
+  line-height: 0.7em;
 }
