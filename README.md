@@ -1,5 +1,3 @@
-class: menu
-
 ## Presentation
 
 ### Androidネタ

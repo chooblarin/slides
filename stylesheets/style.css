@@ -1,4 +1,5 @@
 body {
+  color: #443242;
   font-family: 'mplus-2m-regular';
 }
 h1, h2, h3 {
@@ -9,37 +10,24 @@ code {
   background: #e7e8e2;
   border-radius: 5px;
 }
+a {
+  text-decoration: none;
+}
 
 /*.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }*/
 /*.remark-code-line-highlighted     { background-color: #373832; }*/
 
 .normal {
-  background: #FDF6E4;
+  background: #fDf6e4;
   color: #006866;
 }
 
 .inverse {
-  background: #282C34;
+  background: #282c34;
   color: #c7c8c2;
   text-shadow: 0 0 20px #333;
 }
 .inverse h1, .inverse h2 {
   color: #f3f3f3;
   line-height: 0.8em;
-}
-
-.menu {
-  background: #4D394B;
-  color: #4D394B;
-  line-height: 0.6em;
-}
-
-.menu h1, .menu h2 {
-  color: #f3f3f3;
-  line-height: 0.8em;
-}
-
-.menu h3 {
-  color: #f3f3f3;
-  line-height: 0.7em;
 }

@@ -1,10 +1,9 @@
-class: center, middle
-
+class: center, middle, normal
 ## カスタムビューについて
 (2014/12/08)
 
 ---
-class: left, top
+class: left, top, normal
 ### この発表について
 
 - アメリカから持ち帰ってきた内容です
@@ -16,6 +15,7 @@ class: left, top
 - GitHubに[サンプルコード](https://github.com/smbarne/AndroidReusableUI)もあがってる．やったぜ！
 
 ---
+class: normal
 ### 概要
 
 - 度々必要になるコンポーネントを再利用する方法
@@ -28,6 +28,7 @@ class: left, top
 ...
 
 ---
+class: normal
 ### AndroidのUI
 
 - Activity > Fragment > View
@@ -39,6 +40,7 @@ class: left, top
 - Viewレベルでよく使いそうなコンポーネントがあったらカスタムビューにしたい
 
 ---
+class: normal
 ### レイアウトリソースファイルを使い回す
 
 ```xml
@@ -55,6 +57,7 @@ class: left, top
   - でも多分，大体同じViewロジックを書くことになる
 
 ---
+class: normal
 ### カスタムViewをつくる
 
 1. ViewやViewGroupを継承する
@@ -66,6 +69,7 @@ class: left, top
 以上！簡単〜
 
 ---
+class: normal
 ### カスタムViewにしたいものってどんなもの
 
 - ローディングインディケーターを表示するビュー (元ネタより)
@@ -79,6 +83,7 @@ class: left, top
 etc...
 
 ---
+class: normal
 ### Viewの状態いろいろ
 - ローディングアイコン付きのビューの例
 - ローディング中
@@ -93,6 +98,7 @@ etc...
 etc...
 
 ---
+class: normal
 ### APIを定義 (ローディング付きビューの例)
 
 ```java
@@ -109,6 +115,7 @@ public View setEmptyView(int messageResourceId, int imageDrawableResourceId) {}
 - 初期化メソッドから使うものと同じにすると良い
 
 ---
+class: normal
 ### APIを定義 (バッジアイコン付きボタンの例)
 
 ```java
@@ -133,7 +140,7 @@ public void reset() {
 }
 ```
 ---
-
+class: normal
 ### XMLで使いたい
 
 - XMLファイルで使うとき
@@ -150,6 +157,7 @@ public void reset() {
 - メッセージテキストを設定したい
 
 ---
+class: normal
 ### 属性を処理する (1)
 - res/values/attrs.xmlに定義
 
@@ -168,6 +176,7 @@ public void reset() {
 - `name`には属性名を書く
 - `format`には[AttributeFormat](https://code.google.com/p/idea-android/source/browse/trunk/src/org/jetbrains/android/dom/attrs/AttributeFormat.java?r=96)を書く
 ---
+class: normal
 ### 属性を処理する (2)
 
 ```java
@@ -198,6 +207,7 @@ private void init(Context context, AttributeSet attrs) {
 - `obtainStyledAttributes()`で`TypedArray`を取得する
 - TypedArrayは共有リソースなので`recycle()`を呼ばないとメモリリークするらしいので注意
 ---
+class: normal
 ### XMLから値を設定できるようになった
 
 ```java
@@ -216,17 +226,18 @@ private void init(Context context, AttributeSet attrs) {
 独自のスタイル属性を使うにはルートビューにネームスペースを定義してね
 ---
 
-class: center, middle
+class: center, middle, normal
 
 ## 以上になります
 
 (どうせ元ネタのスライドとサンプルコードがあるしな！)
 
 ---
-class: center, middle
+class: center, middle, normal
 # おまけ
 
 ---
+class: normal
 ### カスタムビュー内のイベントを外で使うのはめんどくさい
 
 - カスタムビューの外でクリックイベントを複数ハンドリングしたいときは
@@ -243,6 +254,7 @@ interface MyCustomViewClickListener {
 みたくなっちゃうので注意．何をカスタムビューでつくるかはよく考えたい．
 
 ---
+class: normal
 ## 作りまくると管理が大変
 
 - 以前，気付いたらカスタムビューだらけになって大変になった
@@ -260,7 +272,7 @@ interface MyCustomViewClickListener {
 ...
 ```
 ---
-
+class: normal
 ## 最後に
 
 サンプルコードのカスタムビュー，ViewFliperを継承してるのなんでだろう…
