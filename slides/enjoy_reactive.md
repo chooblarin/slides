@@ -291,3 +291,8 @@ class: normal
 - [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
 - [【翻訳】あなたが求めていたリアクティブプログラミング入門](http://ninjinkun.hatenablog.com/entry/introrxja)
 - [Improving UX with RxJava](https://medium.com/@diolor/improving-ux-with-rxjava-4440a13b157f#.3mnbbd87g)
+
+--
+
+- [jsFiddle Example](http://jsfiddle.net/staltz/8jFJH/48/)
+- [Draw Cycle](https://glebbahmutov.com/draw-cycle/)
