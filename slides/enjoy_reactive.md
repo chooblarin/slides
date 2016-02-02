@@ -24,13 +24,13 @@ class: inverse, center, middle
 ![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/languages.png)
 
 ---
-class: normal
+class: normal, center, middle
 ### Reactive Extension (Google Trend)
 
 ![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/google-trend.png)
 
 ---
-class: inverse, middle
+class: inverse, center, middle
 ## Everything is a stream
 
 ![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/everything-is-a-stream.jpg)
@@ -42,7 +42,7 @@ class: inverse, center, middle
 
 ---
 class: normal
-### Example (1)
+### Stream
 
 **A Stream of Numbers**
 
@@ -50,9 +50,6 @@ class: normal
 --1--2--3--4--5--6--| // it terminates normally
 ```
 
----
-class: normal
-### Example (2)
 
 **Another one with Characters**
 
@@ -60,9 +57,6 @@ class: normal
 --a--b--a--a--a---d---X // it terminates with error
 ```
 
----
-class: normal
-### Example (3)
 
 **Stream of Button Taps**
 
@@ -72,7 +66,7 @@ class: normal
 
 ---
 class: normal
-### Example (1)
+### A Stream of Numbers
 
 ```
 --1--2--3--4--5--6--| // it terminates normally
@@ -98,7 +92,7 @@ var stream = Rx.Observable.fromArray(array);
 
 ---
 class: normal
-### Example (2)
+### A Stream of Characters
 
 ```
 --a--b--a--a--a---d---X // it terminates with error
@@ -120,7 +114,7 @@ var stream = Rx.Observable.create(observer -> {
 
 ---
 class: normal
-### Example (3)
+### A Stream of UI Events
 
 ```
 ---tap-tap-------tap---> // infinite (maybe)
@@ -134,13 +128,13 @@ var source = Rx.Observable.fromEvent(input, 'click');
 ```
 
 ---
-class: normal, middle
+class: inverse, center, middle
 
 ![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/everything-is-a-stream.jpg)
 
 ---
 class: normal
-## Basic Example (1)
+### Basic Example (1)
 
 The code calculates the value of the `c`
 
@@ -158,7 +152,7 @@ The value of c is now `"3 is positive"`.
 
 ---
 class: normal
-## Basic Example (2)
+### Basic Example (2)
 
 We change the value of `a` to `4`,
 
@@ -189,7 +183,7 @@ class: normal
 class: normal
 ### Implementation with RxJava
 
-```Java
+```java
 BehaviorSubject<Integer> a = BehaviorSubject.create(1);
 BehaviorSubject<Integer> b = BehaviorSubject.create(2);
 BehaviorSubject<String> c = BehaviorSubject.create();
@@ -225,7 +219,7 @@ class: normal
 class: normal
 ### RxAndroid (, RxBinding, RxLifecycle)
 
-```Java
+```java
 RxView.clicks(button)
   .flatMap(event -> request())
   .compose(bindUntilEvent(ActivityEvent.STOP))
@@ -238,9 +232,21 @@ RxView.clicks(button)
 class: normal
 ## ErrorHandling
 
-```Java
+**onError**
+
+```java
 request()
-  .onErrorResumeNext(t-> empty())
+  .doOnError(e -> showErrorMessage())
+  .subscribeOn(Schedulers.io())
+  .observeOn(AndroidSchedulers.mainThread())
+  .subscribe(list -> showList(list));
+```
+
+**retry**
+
+```java
+request()
+  .retry()
   .subscribeOn(Schedulers.io())
   .observeOn(AndroidSchedulers.mainThread())
   .subscribe(list -> showList(list));
@@ -250,13 +256,17 @@ request()
 class: normal
 ### AutoComplete Search
 
-```Java
+```java
 RxTextView.textChanges(searchEditText)
      .debounce(150, MILLISECONDS)
      .switchMap(Api::searchItems)
      .retryWhen(new RetryWithConnectivity())
      .subscribe(this::updateList, t->showError());
 ```
+
+- Reduce network requests
+- Kill previous requests
+- Retry mechanism
 
 ---
 class: inverse, center, middle
