@@ -5,17 +5,17 @@ class: center, middle, inverse
 2016/02/03
 ---
 
-class: normal, center, middle
+class: inverse, center, middle
 
 # Are you new to Rx?
 
 ---
-class: normal
+class: inverse, normal
 ## Reactive Extension
 
 - An API for asynchronous programming with observable streams
 
-- [ReactiveX](http://reactivex.io/)
+- ReactiveX [*](http://reactivex.io/)
 
 ---
 class: inverse, center, middle
@@ -24,8 +24,8 @@ class: inverse, center, middle
 ![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/languages.png)
 
 ---
-class: normal, center, middle
-### Reactive Extension (Google Trend)
+class: inverse, center, middle
+### Reactive Extension (Google Trends)
 
 ![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/google-trend.png)
 
@@ -41,7 +41,7 @@ class: inverse, center, middle
 # Stream!
 
 ---
-class: normal
+class: inverse
 ### Stream
 
 **A Stream of Numbers**
@@ -65,7 +65,7 @@ class: normal
 ```
 
 ---
-class: normal
+class: inverse
 ### A Stream of Numbers
 
 ```
@@ -113,7 +113,7 @@ var stream = Rx.Observable.create(observer -> {
 ```
 
 ---
-class: normal
+class: inverse
 ### A Stream of UI Events
 
 ```
@@ -133,7 +133,7 @@ class: inverse, center, middle
 ![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/everything-is-a-stream.jpg)
 
 ---
-class: normal
+class: inverse
 ### Basic Example (1)
 
 The code calculates the value of the `c`
@@ -151,7 +151,7 @@ if a + b >= 0 {
 The value of c is now `"3 is positive"`.
 
 ---
-class: normal
+class: inverse
 ### Basic Example (2)
 
 We change the value of `a` to `4`,
@@ -171,7 +171,7 @@ a = 4
 `c` should be equal to `"6 is positive"`.
 
 ---
-class: normal
+class: inverse
 ## Observer Pattern
 
 `a` や `b` の値の変更が起こったときは，`c` の値が書き換わって欲しい
@@ -180,7 +180,7 @@ class: normal
 - `c` : `Observer` (Observableでもある)
 
 ---
-class: normal
+class: inverse
 ### Implementation with RxJava
 
 ```java
@@ -200,7 +200,7 @@ class: inverse, center, middle
 ![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/big_bang_theory_season2_screen03.jpg)
 
 ---
-class: normal
+class: inverse
 ## Subject
 
 *A Subject is acts both as an observer and as an Observable.*
@@ -208,7 +208,7 @@ class: normal
 (Maybe another time...)
 
 ---
-class: normal
+class: inverse
 ## Rx in Android
 
 - UIEvents
@@ -216,7 +216,7 @@ class: normal
 - AutoComplete
 
 ---
-class: normal
+class: inverse
 ### RxAndroid (, RxBinding, RxLifecycle)
 
 ```java
@@ -229,7 +229,7 @@ RxView.clicks(button)
 ```
 
 ---
-class: normal
+class: inverse
 ## ErrorHandling
 
 **onError**
@@ -253,7 +253,7 @@ request()
 ```
 
 ---
-class: normal
+class: inverse
 ### AutoComplete Search
 
 ```java
@@ -274,16 +274,18 @@ class: inverse, center, middle
 
 ---
 class: middle, center, inverse
+### One of My Garage Projects
 
-[GitHublarin](https://github.com/chooblarin/githublarin-android)
+GitHub Client Sample App [*](https://github.com/chooblarin/githublarin-android)
 
 ---
-class: middle, inverse
+class: center, middle, inverse
 
 # Thank you!
 ---
 
 ## References
+class: normal
 
 - [RxMarbles.com](http://rxmarbles.com/)
 - [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)

@@ -14,7 +14,7 @@ a {
   text-decoration: none;
 }
 
-/*.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }*/
+.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 /*.remark-code-line-highlighted     { background-color: #373832; }*/
 
 .normal {
