@@ -10,7 +10,7 @@ class: inverse, center, middle
 # Are you new to Rx?
 
 ---
-class: inverse, normal
+class: inverse
 ## Reactive Extension
 
 - An API for asynchronous programming with observable streams
@@ -91,7 +91,7 @@ var stream = Rx.Observable.fromArray(array);
 ```
 
 ---
-class: normal
+class: inverse
 ### A Stream of Characters
 
 ```
@@ -148,13 +148,13 @@ if a + b >= 0 {
 }
 ```
 
-The value of c is now `"3 is positive"`.
+The value of c is now *"3 is positive"*.
 
 ---
 class: inverse
 ### Basic Example (2)
 
-We change the value of `a` to `4`,
+We change the value of *a* to *4*,
 
 ```Swift
 var c: String
@@ -174,10 +174,10 @@ a = 4
 class: inverse
 ## Observer Pattern
 
-`a` や `b` の値の変更が起こったときは，`c` の値が書き換わって欲しい
+*a* や *b* の値の変更が起こったときは，*c* の値が書き換わって欲しい
 
-- `a` , `b` : `Observable`
-- `c` : `Observer` (Observableでもある)
+- *a* , *b* : Observable
+- *c* : Observer (Observableでもある)
 
 ---
 class: inverse
@@ -273,10 +273,10 @@ class: inverse, center, middle
 # Demo
 
 ---
-class: middle, center, inverse
+class: normal, middle, center
 ### One of My Garage Projects
 
-GitHub Client Sample App [*](https://github.com/chooblarin/githublarin-android)
+[GitHub Client Sample App](https://github.com/chooblarin/githublarin-android)
 
 ---
 class: center, middle, inverse

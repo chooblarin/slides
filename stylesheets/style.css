@@ -1,9 +1,9 @@
 body {
   color: #443242;
-  font-family: 'mplus-2m-regular';
+  font-family: 'Droid Serif';
 }
 h1, h2, h3 {
-  font-family: 'mplus-2m-bold';
+  font-family: 'Yanone Kaffeesatz';
   font-weight: bold;
 }
 code {
