@@ -5,71 +5,73 @@ class: center, middle, inverse
 2016/02/03
 ---
 
-class: normal
+class: normal, middle
 
-## Are you new to Rx?
+# Are you new to Rx?
 
 ---
-
 class: normal
-
 ## Reactive Extension
 
 - An API for asynchronous programming with observable streams
 
-- [http://reactivex.io/] (http://reactivex.io/)
+- [ReactiveX](http://reactivex.io/)
 
 ---
-
+class: normal
 ## Reactive Extension
 
-![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-react/language.png)
+![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/language.png)
 
 ---
+class: normal
+### Reactive Extension (Google Trend)
 
-## Reactive Extension (Google Trend)
-
-![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-react/google-trend.png)
+![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/google-trend.png)
 
 ---
-
+class: inverse, middle
 ## Everything is a stream
 
-![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-react/everything-is-a-stream.png)
+![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/everything-is-a-stream.jpg)
 
 ---
-
+class: normal
 ## Stream
 
-A sequence of numbers
+**A Stream of Numbers**
 
 ```
 --1--2--3--4--5--6--| // it terminates normally
 ```
 
 ---
+class: normal
 
-Another one with characters
+**Another one with Characters**
 
 ```
 --a--b--a--a--a---d---X // it terminates with error
 ```
 
 ---
+class: normal
 
-Sequence of button taps
+**Stream of Button Taps**
 
 ```
----tap-tap-------tap---> // infinite (maybe..)
+---tap-tap-------tap---> // infinite (maybe)
 ```
 
 ---
-
-## Introduction
+class: normal
+## Coding
 
 ```
 --1--2--3--4--5--6--| // it terminates normally
 ```
+
+can be
 
 ```
 var stream = Rx.Observable.create(observer -> {
@@ -88,10 +90,13 @@ var stream = Rx.Observable.fromArray(array);
 ```
 
 ---
+class: normal
 
 ```
 --a--b--a--a--a---d---X // it terminates with error
 ```
+
+can be
 
 ```
 var stream = Rx.Observable.create(observer -> {
@@ -106,10 +111,13 @@ var stream = Rx.Observable.create(observer -> {
 ```
 
 ---
+class: normal
 
 ```
----tap-tap-------tap---> // infinite (maybe..)
+---tap-tap-------tap---> // infinite (maybe)
 ```
+
+can be
 
 ```
 var input = $('#inbut');
@@ -117,10 +125,13 @@ var source = Rx.Observable.fromEvent(input, 'click');
 ```
 
 ---
+class: normal
 
-![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-react/everything-is-a-stream.png)
+![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/everything-is-a-stream.jpg)
 
 ---
+class: normal
+## Basic Example
 
 The code calculates the value of the `c`
 
@@ -137,6 +148,8 @@ if a + b >= 0 {
 The value of c is now `"3 is positive"`.
 
 ---
+class: normal
+## Basic Example
 
 We change the value of `a` to `4`,
 
@@ -155,7 +168,7 @@ a = 4
 `c` should be equal to `"6 is positive"`.
 
 ---
-
+class: normal
 ## Observer Pattern
 
 `a` や `b` の値の変更が起こったときは，`c` の値が書き換わって欲しい
@@ -164,6 +177,8 @@ a = 4
 - `c` : `Observer` (Observableでもある)
 
 ---
+class: normal
+## Implementation with RxJava
 
 ```java:
 BehaviorSubject<Integer> a = BehaviorSubject.create(1);
@@ -177,17 +192,20 @@ Observable.combineLatest(a, b, (a, b) -> a + b)
 ```
 
 ---
+class: inverse, middle
 
-![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-react/big_bang_theory_season2_screen03.jpg)
+![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/big_bang_theory_season2_screen03.jpg)
 
 ---
-
+class: normal, middle
 ## Subject
 
-A Subject is acts both as an observer and as an Observable.
+*A Subject is acts both as an observer and as an Observable.*
+
+(Maybe another time...)
 
 ---
-
+class: normal
 ## Rx in Android
 
 - UIEvents
@@ -195,8 +213,8 @@ A Subject is acts both as an observer and as an Observable.
 - AutoComplete
 
 ---
-
-## RxAndroid (, RxBinding, RxLifecycle)
+class: normal
+### RxAndroid (, RxBinding, RxLifecycle)
 
 ```
 RxView.clicks(button)
@@ -208,7 +226,7 @@ RxView.clicks(button)
 ```
 
 ---
-
+class: normal
 ## ErrorHandling
 
 ```
@@ -220,27 +238,32 @@ request()
 ```
 
 ---
-
+class: normal
 ## AutoComplete Search
 
 ```java:
-RxTextView.textChanges(searchEditText) // text change events
-     .debounce(150, MILLISECONDS) // Reduce network requests
-     .switchMap(Api::searchItems) // Request
-     .retryWhen(new RetryWithConnectivity()) // Retry when network
+RxTextView.textChanges(searchEditText)
+     .debounce(150, MILLISECONDS)
+     .switchMap(Api::searchItems)
+     .retryWhen(new RetryWithConnectivity())
      .subscribe(this::updateList, t->showError());
 ```
 
 ---
-
+class: inverse
 ## Demo
 
 ???
 
 ---
+class: middle, inverse
 
-(GitHublarin)[https://github.com/chooblarin/githublarin-android]
+[GitHublarin](https://github.com/chooblarin/githublarin-android)
 
+---
+classs: middle, inverse
+
+# Thank you|
 ---
 
 ## References
