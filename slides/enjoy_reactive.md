@@ -5,7 +5,7 @@ class: center, middle, inverse
 2016/02/03
 ---
 
-class: normal, middle
+class: normal, center, middle
 
 # Are you new to Rx?
 
@@ -18,10 +18,10 @@ class: normal
 - [ReactiveX](http://reactivex.io/)
 
 ---
-class: normal
+class: inverse, center, middle
 ## Reactive Extension
 
-![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/language.png)
+![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/languages.png)
 
 ---
 class: normal
@@ -36,8 +36,13 @@ class: inverse, middle
 ![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/everything-is-a-stream.jpg)
 
 ---
+class: inverse, center, middle
+
+# Stream!
+
+---
 class: normal
-## Stream
+### Example (1)
 
 **A Stream of Numbers**
 
@@ -47,6 +52,7 @@ class: normal
 
 ---
 class: normal
+### Example (2)
 
 **Another one with Characters**
 
@@ -56,6 +62,7 @@ class: normal
 
 ---
 class: normal
+### Example (3)
 
 **Stream of Button Taps**
 
@@ -65,15 +72,15 @@ class: normal
 
 ---
 class: normal
-## Coding
+### Example (1)
 
 ```
 --1--2--3--4--5--6--| // it terminates normally
 ```
 
-can be
+*can be*
 
-```
+```javascript
 var stream = Rx.Observable.create(observer -> {
   for (var i = 1; i <= 6; i++) {
     observer.onNext(i);
@@ -82,23 +89,24 @@ var stream = Rx.Observable.create(observer -> {
 });
 ```
 
-or
+*or*
 
-```
+```javascript
 var list = [1, 2, 3, 4, 5, 6]
 var stream = Rx.Observable.fromArray(array);
 ```
 
 ---
 class: normal
+### Example (2)
 
 ```
 --a--b--a--a--a---d---X // it terminates with error
 ```
 
-can be
+*can be*
 
-```
+```javascript
 var stream = Rx.Observable.create(observer -> {
   observer.onNext('a');
   observer.onNext('b');
@@ -112,30 +120,31 @@ var stream = Rx.Observable.create(observer -> {
 
 ---
 class: normal
+### Example (3)
 
 ```
 ---tap-tap-------tap---> // infinite (maybe)
 ```
 
-can be
+*can be*
 
-```
+```javascript
 var input = $('#inbut');
 var source = Rx.Observable.fromEvent(input, 'click');
 ```
 
 ---
-class: normal
+class: normal, middle
 
 ![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/everything-is-a-stream.jpg)
 
 ---
 class: normal
-## Basic Example
+## Basic Example (1)
 
 The code calculates the value of the `c`
 
-```Swift:
+```Swift
 var c: String
 var a = 1
 var b = 2
@@ -149,11 +158,11 @@ The value of c is now `"3 is positive"`.
 
 ---
 class: normal
-## Basic Example
+## Basic Example (2)
 
 We change the value of `a` to `4`,
 
-```Swift:
+```Swift
 var c: String
 var a = 1
 var b = 2
@@ -178,9 +187,9 @@ class: normal
 
 ---
 class: normal
-## Implementation with RxJava
+### Implementation with RxJava
 
-```java:
+```Java
 BehaviorSubject<Integer> a = BehaviorSubject.create(1);
 BehaviorSubject<Integer> b = BehaviorSubject.create(2);
 BehaviorSubject<String> c = BehaviorSubject.create();
@@ -192,12 +201,12 @@ Observable.combineLatest(a, b, (a, b) -> a + b)
 ```
 
 ---
-class: inverse, middle
+class: inverse, center, middle
 
 ![](https://raw.githubusercontent.com/chooblarin/slides/gh-pages/images/enjoy-reactive/big_bang_theory_season2_screen03.jpg)
 
 ---
-class: normal, middle
+class: normal
 ## Subject
 
 *A Subject is acts both as an observer and as an Observable.*
@@ -216,7 +225,7 @@ class: normal
 class: normal
 ### RxAndroid (, RxBinding, RxLifecycle)
 
-```
+```Java
 RxView.clicks(button)
   .flatMap(event -> request())
   .compose(bindUntilEvent(ActivityEvent.STOP))
@@ -229,7 +238,7 @@ RxView.clicks(button)
 class: normal
 ## ErrorHandling
 
-```
+```Java
 request()
   .onErrorResumeNext(t-> empty())
   .subscribeOn(Schedulers.io())
@@ -239,9 +248,9 @@ request()
 
 ---
 class: normal
-## AutoComplete Search
+### AutoComplete Search
 
-```java:
+```Java
 RxTextView.textChanges(searchEditText)
      .debounce(150, MILLISECONDS)
      .switchMap(Api::searchItems)
@@ -250,20 +259,18 @@ RxTextView.textChanges(searchEditText)
 ```
 
 ---
-class: inverse
-## Demo
-
-???
+class: inverse, center, middle
+# Demo
 
 ---
-class: middle, inverse
+class: middle, center, inverse
 
 [GitHublarin](https://github.com/chooblarin/githublarin-android)
 
 ---
-classs: middle, inverse
+class: middle, inverse
 
-# Thank you|
+# Thank you!
 ---
 
 ## References
