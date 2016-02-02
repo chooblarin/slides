@@ -136,7 +136,7 @@ class: inverse, center, middle
 class: inverse
 ### Basic Example (1)
 
-The code calculates the value of the `c`
+The code calculates the value of the ***c***
 
 ```Swift
 var c: String
@@ -148,13 +148,13 @@ if a + b >= 0 {
 }
 ```
 
-The value of c is now *"3 is positive"*.
+The value of c is now ***"3 is positive"***.
 
 ---
 class: inverse
 ### Basic Example (2)
 
-We change the value of *a* to *4*,
+We change the value of ***a*** to ***4***,
 
 ```Swift
 var c: String
@@ -168,19 +168,19 @@ if a + b >= 0 {
 a = 4
 ```
 
-`c` should be equal to `"6 is positive"`.
+`c` should be equal to ***"6 is positive"***.
 
 ---
 class: inverse
 ## Observer Pattern
 
-*a* や *b* の値の変更が起こったときは，*c* の値が書き換わって欲しい
+***a*** や ***b*** の値の変更が起こったときは，***c*** の値が書き換わって欲しい
 
-- *a* , *b* : Observable
-- *c* : Observer (Observableでもある)
+- ***a*** , ***b*** : Observable
+- ***c*** : Observer (Observableでもある)
 
 ---
-class: inverse
+class: inverse, center, middle
 ### Implementation with RxJava
 
 ```java
@@ -208,7 +208,7 @@ class: inverse
 (Maybe another time...)
 
 ---
-class: inverse
+class: inverse, center, middle
 ## Rx in Android
 
 - UIEvents
