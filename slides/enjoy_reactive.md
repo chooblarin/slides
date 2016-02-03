@@ -75,7 +75,7 @@ class: inverse
 *can be*
 
 ```javascript
-var stream = Rx.Observable.create(observer -> {
+var stream = Rx.Observable.create(observer => {
   for (var i = 1; i <= 6; i++) {
     observer.onNext(i);
   }
@@ -101,14 +101,14 @@ class: inverse
 *can be*
 
 ```javascript
-var stream = Rx.Observable.create(observer -> {
+var stream = Rx.Observable.create(observer => {
   observer.onNext('a');
   observer.onNext('b');
   observer.onNext('a');
   observer.onNext('a');
   observer.onNext('a');
   observer.onNext('d');
-  observer.onError(new Error("Oops!!"));
+  observer.onError(new Error('Oops!!'));
 });
 ```
 
