@@ -168,7 +168,7 @@ if a + b >= 0 {
 a = 4
 ```
 
-`c` should be equal to ***"6 is positive"***.
+***c*** should be equal to ***"6 is positive"***.
 
 ---
 class: inverse
@@ -180,7 +180,7 @@ class: inverse
 - ***c*** : Observer (Observableでもある)
 
 ---
-class: inverse, center, middle
+class: inverse, middle
 ### Implementation with RxJava
 
 ```java
@@ -208,7 +208,7 @@ class: inverse
 (Maybe another time...)
 
 ---
-class: inverse, center, middle
+class: inverse
 ## Rx in Android
 
 - UIEvents
@@ -291,8 +291,6 @@ class: normal
 - [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
 - [【翻訳】あなたが求めていたリアクティブプログラミング入門](http://ninjinkun.hatenablog.com/entry/introrxja)
 - [Improving UX with RxJava](https://medium.com/@diolor/improving-ux-with-rxjava-4440a13b157f#.3mnbbd87g)
-
---
 
 - [jsFiddle Example](http://jsfiddle.net/staltz/8jFJH/48/)
 - [Draw Cycle](https://glebbahmutov.com/draw-cycle/)
